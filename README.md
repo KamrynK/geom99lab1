@@ -22,7 +22,7 @@ First step is to deploy the template into your own account.
 8. Under `Source: Branch`, select `Main`. Leave the other settings as Root
 9. Click `Save` to commit this. 
 
-Now your repository will be accessible under GitHub Pages (an HTML Web Server) at `https://[username].github.io/geom99lab1` where `[username]` is your GitHub account username and the repository name is `geom99lab1`. Note you must type this manually into the URL above, or better yet, modify the ReadMe.md to change [username] to be your actual username! 
+Now your repository will be accessible under GitHub Pages (an HTML Web Server) at `https://[KamrynK].github.io/geom99lab1` where `[username]` is your GitHub account username and the repository name is `geom99lab1`. Note you must type this manually into the URL above, or better yet, modify the ReadMe.md to change [KamrynK] to be your actual username! 
 
 ## Activities to complete
 
@@ -46,7 +46,7 @@ Google Maps is a pay-per-use service for developers and requires a valid API Key
 
 ### Referral (URL links from web pages). 
 
-A referral is the address of the web page where a someone clicked the link that sent them to the page (in this case the various Google API's). The repository URL works only with a specific GitHub Repository name to protect its usage. The URL must be exactly `https://[username].github.io/geom99lab1/` followed by the directory and filename you want to see, where `[username]` is replaced with your actual GitHub account's username.
+A referral is the address of the web page where a someone clicked the link that sent them to the page (in this case the various Google API's). The repository URL works only with a specific GitHub Repository name to protect its usage. The URL must be exactly `https://[KamrynK].github.io/geom99lab1/` followed by the directory and filename you want to see, where `[username]` is replaced with your actual GitHub account's username.
 
 ### Whitelisted IP Address
 
