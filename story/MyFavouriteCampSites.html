@@ -47,6 +47,10 @@
         margin:0;
         padding:30px;
     }
+    map {
+        display: inline;
+        padding: 10;
+    }
 </style>
 <header>
     <h1>Places I Have Camped</h1>
@@ -62,10 +66,13 @@
         <span id="place-id"></span><br />
         <span id="place-address"></span>
     </div>
-    <script>
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
-        defer // Use defer attribute to excute the callback after the full HTML
-    </script>
+    <map name="My avourite Camping Sites">
+        <script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+            defer // Use defer attribute to excute the callback after the full HTML
+        </script>
+    ></map>
+
 </body>
 </html>
 
