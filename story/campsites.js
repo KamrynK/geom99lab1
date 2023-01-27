@@ -1,3 +1,5 @@
+let map;
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
@@ -33,6 +35,5 @@ function initMap() {
         { lat: 45.2572189, lng: -81.6586451}        // Bruce Peninsula Nation Park (Tobermory)
     ];
 }
-
 
 window.initMap = initMap;
