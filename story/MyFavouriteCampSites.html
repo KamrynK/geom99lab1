@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-CA">
-<head>
-    <!-- Adapted from https://developers.google.com/maps/documentation/javascript/marker-clustering#maps_marker_clustering-html-->
-    <title>My Favourite Camp Sites</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="mystyle.css">
-    <script src="script.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style>
+<head> <!-- Adapted from https://developers.google.com/maps/documentation/javascript/marker-clustering#maps_marker_clustering-html-->
+<title>My Favourite Camp Sites</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle.css">
+<script src="script.js" defer></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<style>
     /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
-     #map {
-     height: 100%;
-     }
+    #map {
+        height: 100%;
+    }
 
-     /* Optional: Makes the sample page fill the window. */
-     html,
-     body {
-     height: 100%;
-     margin: 0;
-     padding: 0;
-     }
-    </style>
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family:monaco,monospace;
+        color:#fff;
+        margin:0;
+        background-color:#000
+    }
+
+    .header { 
+        background-color: black;
+        padding: 30px;
+        text-align: center;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        text-align:center;
+    }
+
+    h1 {
+        font-size:60px;
+        margin:0;
+        padding:30px;
+    }
+
+    h2 {
+        font-size:45px;
+        margin:0;
+        padding:30px;
+    }
+</style>
+<header>
+    <h1>Places I Have Camped</h1>
+</header>
+<section>
+    <h3>The below map is a depiction of the my favourite areas in Ontario to Camp, generally located in the south-west region of the province</h3>
+    <h3>Places: Port Burwell, Bruce Peninsula Nation Park, Algonquin Park, The Pinery</h3>
+</section>
 <body>
     <div id="map">
         <img id="place-icon" src="" height="16" width="16" />
         <span id="place-name" class="title"></span><br />
-        Place ID <span id="place-id"></span><br />
+        <span id="place-id"></span><br />
         <span id="place-address"></span>
     </div>
     <script>
