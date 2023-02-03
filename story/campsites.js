@@ -49,13 +49,8 @@ function setMarkers(map) {
     const camp = campsites[i];
 
     new google.maps.Marker({
-      position: [
-        { lat: camp[1], lng: camp[1] },
-        { lat: camp[2], lng: camp[2] },
-        { lat: camp[3], lng: camp[3] },
-        { lat: camp[4], lng: camp[4] },
-      ],
-      map: map,
+      position: { lat: camp[1], lng: camp[2] },
+      map,
       icon: image,
       shape: shape,
       title: camp[0],
