@@ -2,30 +2,21 @@ let map;
 
 function initMap() {
   // Campsite Locations
-  const camp = 
-  // [
-    { lat: 42.648, lng: -80.80949 }         // Port Burwell
-  //   { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
-  //   { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
-  //   { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
-  // ];
-    // The Map centered at Toronto
-  const tdot = new google.maps.Map(document.getElementById("map"), {
+  const camp = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
-    center: camp
-    //{ lat: 43.651, lng: -79.347},  // Toronto  
+    center: { lat: 43.651, lng: -79.347},  // Toronto  
   });
 
   // Create an array of alphabetical characters used to label the markers 
-  const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   // Select the image needed to mark the locations of the campsites
   const image =
     "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
 
   // Now that we have our marker image/icon, we can add the markers to the map
- const marker = new google.maps.Marker({
-    position: camp,                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
+  const marker = new google.maps.Marker({
+    position: { lat: 43.651, lng: -79.347},                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
     map,                                  // using the JavaScript Array.prototype.map() 
     title: "Port Burwell",
     // label: labels,
@@ -42,3 +33,14 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+
+// locations
+  //const camp = 
+  // [
+  //   { lat: 42.648, lng: -80.80949 }         // Port Burwell
+  //   { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
+  //   { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
+  //   { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
+  // ];
+    // The Map centered at Toronto
