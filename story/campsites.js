@@ -43,17 +43,22 @@ function setMarkers(map) {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: "poly",
   };
-  
+
   for (let i = 0; i < campsites.length; i++) {
     const camp = campsites[i];
 
     new google.maps.Marker({
-      position: { lat: camp[1], lng: camp[2] },
-      map,
+      position: [
+        { lat: camp[1], lng: camp[1] },
+        { lat: camp[2], lng: camp[2] },
+        { lat: camp[3], lng: camp[3] },
+        { lat: camp[4], lng: camp[4] },
+      ],
+      map: map,
       icon: image,
       shape: shape,
       title: camp[0],
-      zIndex: beach[3]
+      zIndex: camp[3]
     });
   }
 }
