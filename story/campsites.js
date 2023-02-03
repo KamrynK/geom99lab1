@@ -2,12 +2,19 @@ let map;
 
 // Map initialization - add the map
 function initMap() {
-  // Port Burwell Location
-  const campBurwell = { lat: 42.648, lng: -80.80949 }
-  // Center the map on Port Burwell
+  // Campsite Locations
+  const camp = [
+    { lat: 42.648, lng: -80.80949 },          // Port Burwell
+    { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
+    { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
+    { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
+  ]
+  // Center the map on Toronto
+  const tdot = { lat: 43.651, lng: -79.347 }
+  // call the map and map properties
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: campBurwell,
+    zoom: 5,
+    center: tdot,
   });
 
   // Create an array of alphabetical characters used to label the markers 
@@ -20,7 +27,7 @@ function initMap() {
   // Now that we have our marker image/icon, we can add the markers to the map
   // Position the marker at Port Burwell
   const marker = new google.maps.Marker({
-    position: campBurwell,                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
+    position: camp,                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
     map: map,                                                             // using the JavaScript Array.prototype.map() 
     // title: "Port Burwell",
     // label: labels,
