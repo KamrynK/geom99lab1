@@ -39,10 +39,10 @@ function setMarkers(map) {
   // First we must create a clickable region in the form of polygon, 
   // to allow the markers to be set in a series of x,y points referenced
   // constant variable 'campsites'
-  const shape = {
-    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-    type: "poly",
-  };
+  // const shape = {
+  //   coords: [1, 1, 1, 20, 18, 20, 18, 1],
+  //   type: "poly",
+  // };
 
   for (let i = 0; i < campsites.length; i++) {
     const camp = campsites[i];
