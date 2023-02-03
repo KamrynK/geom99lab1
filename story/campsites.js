@@ -17,8 +17,8 @@ function initMap() {
   // Now that we have our marker image/icon, we can add the markers to the map
   const marker = new google.maps.Marker({
     position: { lat: 43.651, lng: -79.347},                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
-    map,                                  // using the JavaScript Array.prototype.map() 
-    title: "Port Burwell",
+    camp,                                  // using the JavaScript Array.prototype.map() 
+    // title: "Port Burwell",
     // label: labels,
     icon: image,
   });
