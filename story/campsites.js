@@ -39,11 +39,11 @@ function setMarkers(map) {
     const camp = campsites[i];
 
     new google.maps.Marker({
-      position: { lat: beach[1], lng: beach[2] },
+      position: { lat: camp[1], lng: camp[2] },
       map,
       icon: image,
       shape: shape,
-      title: beach[0],
+      title: camp[0],
     });
   }
 }
