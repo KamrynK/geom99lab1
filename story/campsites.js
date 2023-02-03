@@ -10,11 +10,11 @@ function initMap() {
     { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
   ]
   // Center the map on Toronto
-  const tdot = { lat: 43.651, lng: -79.347 }
+  // const tdot = { lat: 43.651, lng: -79.347 }
   // call the map and map properties
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 5,
-    center: tdot,
+    center: camp,
   });
 
   // Create an array of alphabetical characters used to label the markers 
