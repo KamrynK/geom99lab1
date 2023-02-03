@@ -12,11 +12,12 @@ function initMap() {
   setMarkers(map);
 
   // Campsite Locations including a name, and a lat long location 
+  // z index indicates order of layering
   const campsites = [
-    [ "Port Burwell", 42.648, -80.80949 ],                                         // Port Burwell
-    [ "Algoquin Park", 45.5539485, -78.6669714],                                  // Algonquin Park
-    [ "The Pinery", 43.2482353, -81.8269147],                                     // The Pinery 
-    [ "Bruce Peninsula National Park (Tobermory)", 45.2572189, -81.6586451],     // Bruce Peninsula National Park (Tobermory)
+    [ "Port Burwell", 42.648, -80.80949, 2],                                         // Port Burwell
+    [ "Algoquin Park", 45.5539485, -78.6669714, 1],                                  // Algonquin Park
+    [ "The Pinery", 43.2482353, -81.8269147, 4],                                     // The Pinery 
+    [ "Bruce Peninsula National Park (Tobermory)", 45.2572189, -81.6586451, 3],     // Bruce Peninsula National Park (Tobermory)
   ]; 
 
 
@@ -44,6 +45,7 @@ function setMarkers(map) {
       icon: image,
       shape: shape,
       title: camp[0],
+      zIndex: beach[3]
     });
   }
 }
