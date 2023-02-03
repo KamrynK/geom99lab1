@@ -2,12 +2,13 @@ let map;
 
 function initMap() {
   // Campsite Locations
-  const camp = [
+  const camp = 
+  [
     { lat: 42.648, lng: -80.80949 },         // Port Burwell
-    { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
-    { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
-    { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
-  ];
+  //   { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
+  //   { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
+  //   { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
+  // ];
     // The Map centered at Toronto
   const tdot = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
