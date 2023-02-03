@@ -1,56 +1,58 @@
+// The following script displays the users visited camp sites in Ontario, Canada
+// centralized on Toronto, the capital of the Canadian province.
 let map;
-
 // Map initialization - add the map
 function initMap() {
-  // Campsite Locations
-  const camp1 = { lat: 42.648, lng: -80.80949 };         // Port Burwell
-  const camp2 = { lat: 45.5539485, lng: -78.6669714};    // Algonquin Park
-  const camp3 = { lat: 43.2482353, lng: -81.8269147};    // The Pinery 
-  const camp4 = { lat: 45.2572189, lng: -81.6586451};    // Bruce Peninsula National Park (Tobermory)
-
   // Center the map on Toronto
-  const tdot = { lat: 43.651, lng: -79.347 }
-  // call the map and map properties
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
-    center: tdot,
+    zoom: 6,
+    center: { lat: 43.651, lng: -79.347 }, // Pomnt location of Toronto 
   });
 
-  // Create an array of alphabetical characters used to label the markers 
-  // const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  setMarkers(map);
 
+  // Campsite Locations including a name, and a lat long location 
+  const campsites = [
+    [ "Port Burwell", 42.648, -80.80949 ],                                         // Port Burwell
+    [ "Algoquin Park", 45.5539485, -78.6669714],                                  // Algonquin Park
+    [ "The Pinery", 43.2482353, -81.8269147],                                     // The Pinery 
+    [ "Bruce Peninsula National Park (Tobermory)", 45.2572189, -81.6586451],     // Bruce Peninsula National Park (Tobermory)
+  ]; 
+
+
+function setMarkers(map) {
+  // Add markers to map, and dictate size via (X,Y), origin position via X which is located in the top left of the iamge icon
   // Select the image needed to mark the locations of the campsites
-  // const image =
-  //   "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+  const image = {
+    url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    // Marker Size - 20 px wide by 32 px high
+    size: new google.maps.Size(20, 32),
+    // Marker origin - set to (0, 0)
+    origin: new google.maps.Point(0, 0),
+    // Marker anchor - set base of flagpole location, the flagpole is based at (0, 32)
+    anchor: new google.maps.Point(0, 32),
+  };
 
-  // Now that we have our marker image/icon, we can add the markers to the map
-  // Position the marker at Port Burwell
-  const marker = new google.maps.Marker({
-    position: camp1, camp2, camp3, camp4,                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
-    map: map,                                                             // using the JavaScript Array.prototype.map() 
-    // title: "Port Burwell",
-    // label: labels,
-    // icon: image,
-  });
+  // Create the expression that sets a marker to each campsite location
+  // by using a loop to iterate through each location and calling it
+  for (let i = 0; i < campsites.length; i++) {
+    const camp = campsites[i];
 
-  // // create an array of markers based on a given "locations" array 
-  // const beachMarkers = locations.map((location, i) => {
-  //   return new google.maps.Marker({
-  //     position: location,
-  //     label: labels[i % labels.length],
-  //   });
-  // });
+    new google.maps.Marker({
+      position: { lat: beach[1], lng: beach[2] },
+      map,
+      icon: image,
+      shape: shape,
+      title: beach[0],
+    });
+  }
+}
 }
 
 window.initMap = initMap;
 
-
-// locations
-  //const camp = 
-  // [
-  //   { lat: 42.648, lng: -80.80949 }         // Port Burwell
-  //   { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
-  //   { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
-  //   { lat: 45.2572189, lng: -81.6586451},    // Bruce Peninsula National Park (Tobermory)
-  // ];
-    // The Map centered at Toronto{ lat: 43.651, lng: -79.347 },  // Toronto  
+  // const marker = new google.maps.Marker({
+  //   position: camp,                        // Center the location over the the desired locations - Port Burwell, Algoquin Park, the Pinery, Bruce Peninsula National Parl (Tobermory),
+  //   map: map,                              // using the JavaScript Array.prototype.map() 
+//   });
+// }
