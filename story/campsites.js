@@ -3,7 +3,7 @@ let map;
 function initMap() {
   // Campsite Locations
   const camp = 
-  [
+  // [
     { lat: 42.648, lng: -80.80949 },         // Port Burwell
   //   { lat: 45.5539485, lng: -78.6669714},    // Algonquin Park
   //   { lat: 43.2482353, lng: -81.8269147},    // The Pinery 
