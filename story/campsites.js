@@ -1,6 +1,10 @@
 // The following script displays the users visited camp sites in Ontario, Canada
 // centralized on Toronto, the capital of the Canadian province.
 let map;
+// Add marker label
+// Each marker is labeled with a single alphabetical character.
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labelIndex = 0;
 // Map initialization - add the map
 function initMap() {
   // Center the map on Toronto
@@ -44,11 +48,17 @@ function setMarkers(map) {
     type: "poly",
   };
 
+  // This event listener calls addMarker() when the map is clicked.
+  google.maps.event.addListener(map, "click", (event) => {
+    addMarker(event.latLng, map);
+  });
+
   for (let i = 0; i < campsites.length; i++) {
     const camp = campsites[i];
 
     new google.maps.Marker({
       position: { lat: camp[1], lng: camp[2] },
+      label: labels[labelIndex++ % labels.length],
       map,
       icon: image,
       shape: shape,
