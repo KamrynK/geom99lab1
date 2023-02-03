@@ -21,7 +21,6 @@ const campsites = [
   [ "Bruce Peninsula National Park (Tobermory)", 45.2572189, -81.6586451, 3],     // Bruce Peninsula National Park (Tobermory)
 ]; 
 
-
 function setMarkers(map) {
   // Add markers to map, and dictate size via (X,Y), origin position via X which is located in the top left of the iamge icon
   // Select the image needed to mark the locations of the campsites
@@ -33,7 +32,7 @@ function setMarkers(map) {
     origin: new google.maps.Point(0, 0),
     // Marker anchor - set base of flagpole location, the flagpole is based at (0, 32)
     anchor: new google.maps.Point(0, 32),
-  };
+};
 
   // Create the expression that sets a marker to each campsite location
   // by using a loop to iterate through each location and calling it.
